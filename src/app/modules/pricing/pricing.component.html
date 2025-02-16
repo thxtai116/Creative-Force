@@ -1,0 +1,58 @@
+<section class="pricing-section">
+    <div class="container">
+      <h1>Choose the best plan for your business</h1>
+      <p>Find the perfect plan tailored to your organization's production volume and needs.</p>
+  
+      <!-- Slider -->
+      <app-slider (priceChange)="updatePrices($event)"></app-slider>
+  
+      <!-- Pricing Cards -->
+      <div class="pricing-cards">
+        <div class="card starter">
+          <h2>Starter</h2>
+          <p class="price">${{ priceStarter }}/month</p>
+          <p class="description">
+            For retailers of all sizes. Get started with workflow automation and get benefits from day one.
+          </p>
+          <ul>
+            <li>Unlimited Users</li>
+            <li>Images, Video & Copy</li>
+            <li>Digital Style Guides</li>
+            <li>Workflow Automation</li>
+          </ul>
+          <button class="btn">GET A QUOTE</button>
+        </div>
+  
+        <div class="card core">
+          <h2>Core</h2>
+          <p class="price">${{ priceCore }}/month</p>
+          <p class="description">
+            For retailers of all sizes with a need for advanced workflow automation.
+          </p>
+          <ul>
+            <li>Everything in Starter +</li>
+            <li>AI Automation</li>
+            <li>2FA & SSO</li>
+            <li>Data Sources</li>
+          </ul>
+          <button class="btn">GET A QUOTE</button>
+        </div>
+  
+        <div class="card enterprise">
+          <h2>Enterprise</h2>
+          <p class="price">Custom</p>
+          <p class="description">
+            For retailers of all sizes with a need for advanced workflow automation.
+          </p>
+          <ul>
+            <li>Everything in Core +</li>
+            <li>Unlimited Workspaces</li>
+            <li>Talent Resourcing</li>
+            <li>Data Analyst Access</li>
+          </ul>
+          <button class="btn">GET A QUOTE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,27 @@
+<section class="ai-innovations">
+  <div class="container">
+    <h2>Elevate your studio with <span>✨ AI-powered innovations.</span></h2>
+    <p>At Creative Force, we research, test, and develop innovative AI-driven solutions that empower creative teams to transform their content production processes.</p>
+
+    <div class="innovations-grid">
+      <div 
+        class="innovation-card" 
+        [class.wide]="item.wide" 
+        *ngFor="let item of innovations">
+        
+        <div class="card-label">{{ item.label }}</div>
+
+        <div *ngIf="item.icons" class="icons-container">
+          <img *ngFor="let icon of item.icons" [src]="icon" alt="Workflow icon">
+        </div>
+
+        <img [src]="item.image" [alt]="item.title">
+        
+        <div class="card-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

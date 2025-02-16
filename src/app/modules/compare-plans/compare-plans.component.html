@@ -1,0 +1,32 @@
+<section class="compare-plans">
+    <div class="container">
+      <h2>Compare plans</h2>
+      <div class="plans-header">
+        <div *ngFor="let plan of plans" class="plan">
+          <h3>{{ plan.name }}</h3>
+          <p class="price">{{ plan.price }}</p>
+          <button>{{ plan.btnText }}</button>
+        </div>
+      </div>
+  
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Features</th>
+              <th *ngFor="let plan of plans">{{ plan.name }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let feature of features">
+              <td class="feature-name">{{ feature.name }}</td>
+              <td *ngFor="let value of feature.values" class="feature-value">{{ value }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <button class="show-more">Show all</button>
+    </div>
+  </section>
+  

@@ -1,0 +1,9 @@
+.slider-container {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+
+  mat-slider {
+    width: 100%;
+  }
+}

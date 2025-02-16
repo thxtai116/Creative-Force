@@ -1,0 +1,18 @@
+<section class="ai-future">
+    <div class="content">
+      <h2 [innerHTML]="title"></h2>
+      <p>{{ description }}</p>
+      <button>{{ buttonText }}</button>
+      <div class="team">
+        <img *ngFor="let avatar of teamAvatars" [src]="avatar" alt="Team Member">
+      </div>
+    </div>
+    <div class="product-display">
+      <div class="product-images">
+        <img class="jeans" [src]="productImages.jeans" alt="Jeans">
+        <img class="model" [src]="productImages.model" alt="Model Wearing Jeans">
+        <img class="swatch" [src]="productImages.fabricSwatch" alt="Fabric Swatch">
+      </div>
+    </div>
+  </section>
+  

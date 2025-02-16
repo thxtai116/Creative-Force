@@ -1,0 +1,45 @@
+<footer class="footer">
+    <div class="footer-top">
+      <!-- Left: Logo & Ratings -->
+      <div class="footer-brand">
+        <img src="../../../../assets/icon/CF-logo.svg" alt="Creative Force Logo">
+        <div class="ratings">
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+          <span>Read our reviews</span>
+        </div>
+        <div class="compliance">
+          <span>🔒 SOC-2</span>
+          <p>We are type II compliant</p>
+        </div>
+        <div class="partner">
+          <span>Member of</span>
+          <img src="../../../../assets/icon/Vector.svg" alt="MACH Alliance">
+        </div>
+      </div>
+  
+      <!-- Middle: Footer Links -->
+      <div class="footer-links">
+        <div *ngFor="let category of footerLinks" class="footer-column">
+          <h4>{{ category.title }}</h4>
+          <ul>
+            <li *ngFor="let link of category.links"><a href="#">{{ link }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom: Copyright & Social Media -->
+    <div class="footer-bottom">
+      <p>© 2024 Creative Force, Inc. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Legal & Security</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <div class="social-icons">
+        <!-- <a *ngFor="let social of socialIcons" [href]="social.url">
+          <img [src]="'/assets/icons/' + social.icon + '.svg'" [alt]="social.icon">
+        </a> -->
+      </div>
+    </div>
+  </footer>
+  

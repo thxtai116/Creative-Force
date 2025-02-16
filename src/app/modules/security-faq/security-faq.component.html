@@ -1,0 +1,35 @@
+<section class="security-faq">
+    <!-- Security Section -->
+    <div class="security">
+      <h2>Security & Compliance.</h2>
+      <p>
+        Built to meet the highest standards of data protection and regulatory compliance.
+        Our robust infrastructure includes advanced encryption protocols, ensuring your
+        data remains secure and fully compliant at all times.
+      </p>
+      <div class="security-icons">
+        <div class="icon-box" *ngFor="let item of securityItems">
+          <span class="material-icons">{{ item.icon }}</span>
+          <span>{{ item.title }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- FAQ Section -->
+    <div class="faq">
+      <h2>Frequently asked questions.</h2>
+      <p>Looking for more information? Check out these frequently asked questions about our pricing.</p>
+      <div class="faq-list">
+        <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+          <div class="faq-question" (click)="toggleFaq(i)">
+            {{ faq.question }}
+            <span class="material-icons">{{ faq.open ? "remove" : "add" }}</span>
+          </div>
+          <div class="faq-answer" *ngIf="faq.open">
+            {{ faq.answer || "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

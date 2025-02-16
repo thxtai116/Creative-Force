@@ -1,0 +1,31 @@
+<section class="testimonials">
+    <h2>Trusted by industry leaders.</h2>
+    <p>See how Creative Force empowers brands to achieve faster results, increase productivity, and streamline their creative processes.</p>
+  
+    <div class="testimonials-grid">
+      <div *ngFor="let item of testimonials" class="testimonial-card">
+        <div *ngIf="item.logo">
+          <img [src]="item.logo" alt="Logo">
+        </div>
+        <p>{{ item.text }}</p>
+        <span *ngIf="item.caseStudy" class="case-study">{{ item.caseStudy }}</span>
+        <span *ngIf="item.author" class="author">{{ item.author }}</span>
+        <span *ngIf="item.company" class="company">{{ item.company }}</span>
+        <div *ngIf="item.rating" class="stars">
+          ⭐⭐⭐⭐⭐
+        </div>
+      </div>
+    </div>
+  
+    <div class="awards">
+      <div *ngFor="let award of awards" class="award-card">
+        <img [src]="award.image" [alt]="award.title">
+        <p>{{ award.title }} <span>{{ award.season }}</span></p>
+      </div>
+    </div>
+  
+    <div class="brand-logos">
+      <!-- <img *ngFor="let logo of brandLogos" [src]="logo" alt="Brand"> -->
+    </div>
+  </section>
+  
